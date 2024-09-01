@@ -1,0 +1,45 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>all users</title>
+    <link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg bg-black">
+            <div class="container-fluid col-12">
+                <a class="navbar-brand text-white col-2" href="/Users/Welcome">My Website </a>
+
+                <div class="collapse navbar-collapse col-7 mx-auto px-5 ms-5" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                        <a class="nav-link  text-white active mx-4" aria-current="page" href="/Users/Index">All Users</a>
+                        <a class="nav-link text-white mx-4" href="/Users/About">About us</a>
+                        <a class="nav-link text-white mx-4" href="/Users/Blog">Our Blog</a>
+                        <a class="nav-link text-white mx-4" href="/Users/Projects">Projects</a>
+                    </div>
+                </div>
+                <div class="col-2 d-flex justify-content-end">
+                    <a class=" text-white mx-4 text-center  btn btn-primary" href="/Users/Register">Register </a>
+                    <a class="text-white  text-center  btn btn-outline-primary" href="/Users/Login">Login</a>
+
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main class="container text-center pt-5  h-75 d-flex justify-content-center align-items-center">
+        @RenderBody()
+    </main>
+    <footer class="bg-black py-3 position-absolute bottom-0 w-100">
+        <div class="container text-center text-white h-100">
+            <small>Copyright &copy; Your Website</small>
+        </div>
+    </footer>
+</body>
+</html>

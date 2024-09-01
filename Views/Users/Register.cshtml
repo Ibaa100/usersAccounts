@@ -1,0 +1,80 @@
+﻿
+@{
+    Layout = null;
+}
+@model User
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Register</title>
+    <link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+
+</head>
+<body class="d-flex justify-content-center align-items-center">
+    <!-- Registration 6 - Bootstrap Brain Component -->
+    <section class="bg-primary w-100 d-flex justify-content-center align-items-center pt-3">
+        <div class="container w-75 vh-100 mt-2 ">
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-9 col-lg-7 col-xl-6 col-xxl-5">
+                    <div class="card border-0 shadow-sm rounded-4">
+                        <div class="card-body p-5 p-md-4 p-xl-5">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div >
+                                        <h2 class="h3">Registration</h2>
+                                        <h3 class="fs-6 fw-normal text-secondary ">Enter your details to register</h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <form asp-controller="Users" asp-action="Register">
+                                <div class="row gy-3 overflow-hidden">
+                                    <div class="col-12">
+                                        <div class="form-floating mb-3">
+                                            <input asp-for="FName" class="form-control" id="firstName" placeholder="First Name" required>
+                                            <label asp-for="FName" class="form-label">First Name</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="form-floating mb-3">
+                                            <input asp-for="LName" class="form-control"  id="lastName" placeholder="First Name" required>
+                                            <label asp-for="LName" class="form-label">Last Name</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="form-floating mb-3">
+                                            <input asp-for="Email" class="form-control" id="email" value="" placeholder="gmail.com" required>
+                                            <label asp-for="Email" class="form-label">Email</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="form-floating mb-3">
+                                            <input asp-for="Password"  class="form-control"  id="password" value="" placeholder="Password" required>
+                                            <label asp-for="Password" class="form-label">Password</label>
+                                        </div>
+                                    </div>
+                                 
+                                    <div class="col-12">
+                                        <div class="d-grid">
+                                            <button class="btn bsb-btn-2xl btn-primary" type="submit">Sign up</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                            <div class="row">
+                                <div class="col-12">
+                                    <hr class=" mb-4 border-secondary-subtle">
+                                    <p class="m-0 text-secondary text-center">Already have an account? <a href="/Users/Login" class="link-primary text-decoration-none">Sign in</a></p>
+                                </div>
+                            </div>
+                           
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

@@ -1,0 +1,30 @@
+﻿@{
+    Layout = "_mainLayout";
+}
+@model IEnumerable<User>
+<div class="d-flex justify-content-center align-items-center">
+    <h1>All Users</h1>
+    <table class="table">
+        <thead>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Email</th>
+        <th>Action</th>
+        </thead>
+        <tbody>
+            @foreach (var user in Model)
+            {
+                <tr>
+                    <td>First Name</td>
+                    <td>Last Name</td>
+                    <td>Email</td>
+                    @if (!user.IsActive)
+                    {
+                        <a asp-controller="Users" asp-action="ChangeToActive" asp-route-id="@user.Id" class="btn btn-success"> Activate </a>
+                    }
+                </tr>
+            }
+</tbody>
+
+    </table>
+</div>
